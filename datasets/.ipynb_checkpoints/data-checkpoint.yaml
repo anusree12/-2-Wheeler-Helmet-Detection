@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 4
+names: ['number plate', 'rider', 'with helmet', 'without helmet']
+
+roboflow:
+  workspace: helmet-detection-onmvh
+  project: custom-workflow-object-detection-tpsgv
+  version: 4
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/helmet-detection-onmvh/custom-workflow-object-detection-tpsgv/dataset/4

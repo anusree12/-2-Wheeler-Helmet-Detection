@@ -1,0 +1,7 @@
+flask
+ultralytics==8.0.20
+opencv-python
+Pillow
+paddleocr
+paddlepaddle==2.5.0
+numpy

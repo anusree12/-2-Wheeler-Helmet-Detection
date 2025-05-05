@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2-Wheeler Helmet Detection</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #1f2937;
+      color: white;
+      padding: 1rem;
+      font-size: 1.6rem;
+    }
+    .container {
+      margin-top: 2rem;
+    }
+    .upload-box {
+      margin: 1rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 600px;
+    }
+    input[type="file"] {
+      margin: 1rem 0;
+    }
+    img {
+      max-width: 100%;
+      margin-top: 1rem;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+    }
+    .footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>🛵 2-Wheeler Helmet Detection</header>
+
+  <div class="container">
+    <div class="upload-box">
+      <form action="/predict" method="POST" enctype="multipart/form-data">
+        <h3>Select an Image for Detection</h3>
+        <input type="file" name="image" accept="image/*" required>
+        <br>
+        <button type="submit">Upload & Detect</button>
+      </form>
+
+      <!-- Display result image -->
+<!-- Display detection result image -->
+{% if result_image %}
+  <h4>Detection Result:</h4>
+  <img src="{{ url_for('static', filename=result_image) }}" alt="Detection Result" width="400">
+{% endif %}
+
+<!-- Display result log text -->
+{% if result_text %}
+  <pre>{{ result_text }}</pre>
+{% endif %}
+
+    </div>
+  </div>
+
+  <div class="footer">Powered by YOLO & Flask · Created by Anusree</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+ I got a dataset on Kaggle, : archive.zip
+    Downloaded and unzipped the file
+    It includes:
+    2 folders (train(image,label), val(image,label))
+    And 2 files: classess, coco128.yaml
+(I renamed coco128.yaml to data.yaml (not mandetory))
+First:
+    Create and run the yolo model (ONCE) : python train_model.py
+    (Automatically create the runs folder (+ subfolders and file))
+
+Then I wrote the code in detect.py
+For deployment: app.py, static, templates
+
+Unfortunately, the dataset is very small, so the accuracy is very low.
+
+So I decided to create a new dataset using python toools,
+
+    I chose Roboflow, an online tool to easily create this type of dataset
+
+    I took the images for it (from train, tail image) +
+                                    I downloaded many other images from Google
+
+    I created a new dataset, downloaded that dataset,
+
+I tried using the new dataset here and got better results.
+
+
+at last , run python app.py
+browse : 127.0.0.5050
