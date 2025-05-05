@@ -51,4 +51,4 @@ Detects:
       
             python app.py
       
-      Open in browser: http://localhost:5000
+      Open in browser: http://localhost:5050
